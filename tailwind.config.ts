@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				parenthood: {
+					primary: '#6a8eaf',
+					secondary: '#92c5eb',
+					accent: '#e5c7b5',
+					muted: '#f2e6df',
+					background: '#fafafa',
+					dark: '#34495e'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'message-fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				typing: {
+					'0%': { width: '0%' },
+					'20%': { width: '20%' },
+					'40%': { width: '40%' },
+					'60%': { width: '60%' },
+					'80%': { width: '80%' },
+					'100%': { width: '100%' }
+				},
+				'pulse-light': {
+					'0%, 100%': { opacity: '0.6' },
+					'50%': { opacity: '0.3' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'message-fade-in': 'message-fade-in 0.3s ease-out forwards',
+				'typing': 'typing 1.5s ease-in-out infinite',
+				'pulse-light': 'pulse-light 1.5s ease-in-out infinite'
 			}
 		}
 	},
