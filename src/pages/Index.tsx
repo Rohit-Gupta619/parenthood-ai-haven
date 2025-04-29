@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -37,12 +36,12 @@ const teamMembers: TeamMemberProps[] = [
 const features = [
   {
     title: 'Personalized Advice',
-    description: 'Get customized parenting guidance based on your child's age, temperament, and your family situation.',
+    description: "Get customized parenting guidance based on your child's age, temperament, and your family situation.",
     icon: <User className="h-5 w-5 text-primary" />,
   },
   {
     title: 'Community Support',
-    description: 'Access a network of parents and experts who understand what you're going through.',
+    description: "Access a network of parents and experts who understand what you're going through.",
     icon: <Users className="h-5 w-5 text-primary" />,
   },
   {
