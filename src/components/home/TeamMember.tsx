@@ -1,12 +1,15 @@
 
 import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Linkedin, Mail } from 'lucide-react';
 
 export interface TeamMemberProps {
   name: string;
   role: string;
   image: string;
   description: string;
+  linkedinUrl?: string;
+  emailAddress?: string;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -14,6 +17,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   role,
   image,
   description,
+  linkedinUrl,
+  emailAddress,
 }) => {
   return (
     <Card className="overflow-hidden transition-all hover:shadow-md">
@@ -31,8 +36,18 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       </CardContent>
       <CardFooter className="border-t p-4">
         <div className="flex space-x-4">
-          <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
-          <a href="#" className="text-muted-foreground hover:text-primary">Email</a>
+          {linkedinUrl && (
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-primary">
+              <Linkedin className="h-5 w-5 mr-1" />
+              LinkedIn
+            </a>
+          )}
+          {emailAddress && (
+            <a href={`mailto:${emailAddress}`} className="flex items-center text-muted-foreground hover:text-primary">
+              <Mail className="h-5 w-5 mr-1" />
+              Email
+            </a>
+          )}
         </div>
       </CardFooter>
     </Card>

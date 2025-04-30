@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -12,24 +13,32 @@ const teamMembers: TeamMemberProps[] = [
     role: 'Child Development Expert',
     image: '/placeholder.svg',
     description: 'With 15 years of experience in child psychology, Emma helps parents understand developmental milestones and behaviors.',
+    linkedinUrl: 'https://linkedin.com/in/emma-johnson',
+    emailAddress: 'emma@parenthoodai.com',
   },
   {
     name: 'Michael Chen',
     role: 'Parenting Coach',
     image: '/placeholder.svg',
     description: 'Former teacher turned parenting coach, Michael specializes in positive discipline techniques for toddlers and teens.',
+    linkedinUrl: 'https://linkedin.com/in/michael-chen',
+    emailAddress: 'michael@parenthoodai.com',
   },
   {
     name: 'Sarah Williams',
     role: 'Infant Care Specialist',
     image: '/placeholder.svg',
     description: 'Certified nurse with expertise in newborn care, feeding, and sleep training for babies in their first year.',
+    linkedinUrl: 'https://linkedin.com/in/sarah-williams',
+    emailAddress: 'sarah@parenthoodai.com',
   },
   {
     name: 'James Rodriguez',
     role: 'Family Therapist',
     image: '/placeholder.svg',
     description: 'Licensed therapist focusing on family dynamics and helping parents navigate challenging transitions.',
+    linkedinUrl: 'https://linkedin.com/in/james-rodriguez',
+    emailAddress: 'james@parenthoodai.com',
   },
 ];
 
@@ -137,6 +146,8 @@ const Index: React.FC = () => {
                 role={member.role}
                 image={member.image}
                 description={member.description}
+                linkedinUrl={member.linkedinUrl}
+                emailAddress={member.emailAddress}
               />
             ))}
           </div>
